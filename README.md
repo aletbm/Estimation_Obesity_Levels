@@ -1,3 +1,5 @@
+![banner](https://camo.githubusercontent.com/170d65f3a251ad19a48fe853b42e51665215cf52af59c4b689a5cd1aa9e720f1/68747470733a2f2f692e706f7374696d672e63632f6d3253636b51504d2f626f64792d6d6173732d696e6465782d63616c63756c61746f722d322e706e67)
+
 # Estimation of obesity levels based on eating habits and physical condition
 
 This repository was created as part of [the DataTalks.Club's Machine Learning Zoomcamp](https://github.com/alexeygrigorev) by [Alexey Grigorev](https://github.com/alexeygrigorev).
