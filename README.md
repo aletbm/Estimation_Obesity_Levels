@@ -35,21 +35,21 @@ wget https://raw.githubusercontent.com/aletbm/MySolutions_MLZoomcamp2024_DataTal
 
 ## Dataset analysis and Training models
 
-The dataset analysis and the models training were conducted in Jupyter Notebook. You can find this file in this [repository folder](https://github.com/aletbm/MySolutions_MLZoomcamp2024_DataTalks.Club/tree/main/Estimation_Obesity_Levels_midterm_project/analysis).
+The dataset analysis and the models training were conducted in Jupyter Notebook. You can find this file in this [repository folder](https://github.com/aletbm/Estimation_Obesity_Levels/tree/main/analysis).
 
-The training script for the selected model is available in this [repository file](https://github.com/aletbm/MySolutions_MLZoomcamp2024_DataTalks.Club/blob/main/Estimation_Obesity_Levels_midterm_project/scripts/train.py).
+The training script for the selected model is available in this [repository file](https://github.com/aletbm/Estimation_Obesity_Levels/blob/main/scripts/train.py).
 
-The pipeline to preprocess the dataset, along with the label encoder and the final model, was exported to a file named [obesity-levels-model.bin](https://github.com/aletbm/MySolutions_MLZoomcamp2024_DataTalks.Club/blob/main/Estimation_Obesity_Levels_midterm_project/model/obesity-levels-model.bin)
+The pipeline to preprocess the dataset, along with the label encoder and the final model, was exported to a file named [obesity-levels-model.bin](https://github.com/aletbm/Estimation_Obesity_Levels/blob/main/model/obesity-levels-model.bin)
 
 ## Running the project locally
 
 ### Using Flask
 
-The script to deploy the model using Flask is [predict.py](https://github.com/aletbm/MySolutions_MLZoomcamp2024_DataTalks.Club/blob/main/Estimation_Obesity_Levels_midterm_project/scripts/predict.py).
+The script to deploy the model using Flask is [predict.py](https://github.com/aletbm/Estimation_Obesity_Levels/blob/main/scripts/predict.py).
 
-[Pipfile](https://github.com/aletbm/MySolutions_MLZoomcamp2024_DataTalks.Club/blob/main/Estimation_Obesity_Levels_midterm_project/Pipfile) and [Pipfile.lock](https://github.com/aletbm/MySolutions_MLZoomcamp2024_DataTalks.Club/blob/main/Estimation_Obesity_Levels_midterm_project/Pipfile.lock) set up the Pipenv environment. 
+[Pipfile](https://github.com/aletbm/Estimation_Obesity_Levels/blob/main/Pipfile) and [Pipfile.lock](https://github.com/aletbm/Estimation_Obesity_Levels/blob/main/Pipfile.lock) set up the Pipenv environment. 
 
-First, you need to install from [Pipfile](https://github.com/aletbm/MySolutions_MLZoomcamp2024_DataTalks.Club/blob/main/Estimation_Obesity_Levels_midterm_project/Pipfile):
+First, you need to install from [Pipfile](https://github.com/aletbm/Estimation_Obesity_Levels/blob/main/Pipfile):
 ```
 pipenv install
 ```
@@ -66,7 +66,7 @@ You can test the model by running:
 ```
 python scripts/test.py
 ```
-Don't forget to update the `url` variable in the [test.py](https://github.com/aletbm/MySolutions_MLZoomcamp2024_DataTalks.Club/blob/main/Estimation_Obesity_Levels_midterm_project/scripts/test.py) file to:
+Don't forget to update the `url` variable in the [test.py](https://github.com/aletbm/Estimation_Obesity_Levels/blob/main/scripts/test.py) file to:
 ```
 url = "http://localhost:9696/predict"
 ```
@@ -81,14 +81,14 @@ You can test the model by running:
 ```
 python scripts/test.py
 ```
-Don't forget to update the `url` variable in the [test.py](https://github.com/aletbm/MySolutions_MLZoomcamp2024_DataTalks.Club/blob/main/Estimation_Obesity_Levels_midterm_project/scripts/test.py) file to:
+Don't forget to update the `url` variable in the [test.py](https://github.com/aletbm/Estimation_Obesity_Levels/blob/main/scripts/test.py) file to:
 ```
 url = "http://localhost:9696/predict"
 ```
 
 ### Local deployment with Docker
 
-[Dockerfile](https://github.com/aletbm/MySolutions_MLZoomcamp2024_DataTalks.Club/blob/main/Estimation_Obesity_Levels_midterm_project/Dockerfile) contain the Docker instructions.
+[Dockerfile](https://github.com/aletbm/Estimation_Obesity_Levels/blob/main/Dockerfile) contain the Docker instructions.
 
 To build the container, you can run the following command:
 ```
@@ -102,7 +102,7 @@ docker run -p 9696:9696 -it estimation-obesity-levels:latest
 
 ### Remote deployment with Docker and AWS Elastic Beanstalk
 
-Before to deploy, you need to install the dev-packages from [Pipfile](https://github.com/aletbm/MySolutions_MLZoomcamp2024_DataTalks.Club/blob/main/Estimation_Obesity_Levels_midterm_project/Pipfile):
+Before to deploy, you need to install the dev-packages from [Pipfile](https://github.com/aletbm/Estimation_Obesity_Levels/blob/main/Pipfile):
 ```
 pipenv install -d
 ```
@@ -134,7 +134,7 @@ In this case I used AWS Elastic Beanstalk with the free tier, so I could only us
 
 Finally, you have an application running on AWS Elastic Beanstalk. You need to go to the AWS console, search for Elastic Beanstalk, and click on the Environments section of your application. There, you can find the domain where your application was deployed. 
 
-If you want to test my application, you must change the `url` variable in the [test.py](https://github.com/aletbm/MySolutions_MLZoomcamp2024_DataTalks.Club/blob/main/Estimation_Obesity_Levels_midterm_project/scripts/test.py) file to:
+If you want to test my application, you must change the `url` variable in the [test.py](https://github.com/aletbm/Estimation_Obesity_Levels/blob/main/scripts/test.py) file to:
 ```
 url = "http://estimationobesitylevels.us-east-1.elasticbeanstalk.com/predict"
 ```
